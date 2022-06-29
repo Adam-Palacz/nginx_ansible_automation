@@ -7,7 +7,7 @@ Projekt zaliczeniowy z przedmiotu "Administracja serwerowymi systemami operacyjn
 
 ## **Spis treści** 
 
-**[Wstęp teoretyczny](#wstęp-teoretyczny) 3**
+**[Wstęp teoretyczny](#wstęp-teoretyczny)**
 
 > [Ansible](#ansible)
 >
