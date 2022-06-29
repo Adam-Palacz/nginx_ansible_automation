@@ -190,8 +190,6 @@ kolejnych wirtualnych maszyn dołączanie ich do procesu load balancingu.
 
 ## 
 
-## 
-
 ## Przebieg tworzenia projektu
 
 #### **Utworzenie wirtualnych maszyn Ubuntu Server**
@@ -230,8 +228,7 @@ kolejnych wirtualnych maszyn dołączanie ich do procesu load balancingu.
 
 ![](files/media/image7.png)
 
--   Połączenie do maszyny master przy użyciu Remote SSH w Visual Studio
-    > Code
+-   Połączenie do maszyny master przy użyciu Remote SSH w Visual Studio Code
 
 ![](files/media/image15.png)
 
@@ -257,8 +254,7 @@ kolejnych wirtualnych maszyn dołączanie ich do procesu load balancingu.
 
 ![](files/media/image28.png)
 
--   Wyślij na slave'y pliki konfiguracyjne nginx i utwórz linki z
-    > sites-available do sites-enable
+-   Wyślij na slave'y pliki konfiguracyjne nginx i utwórz linki z sites-available do sites-enable
 
 ![](files/media/image32.png)
 
@@ -293,8 +289,7 @@ będzie wykorzystany do load balancigu z użyciem dockera)*
 
 ![](files/media/image41.png)
 
--   Zmieniamy wartości w plikach html w zależności od tego na którym
-    > slave plik się znajduje
+-   Zmieniamy wartości w plikach html w zależności od tego na której maszynie slave plik się znajduje
 
 ![](files/media/image31.png)
 
@@ -314,13 +309,11 @@ będzie wykorzystany do load balancigu z użyciem dockera)*
 
 -   Przesyłamy na maszyny plik index.html.
 
--   Podmieniamy adresy dla naszego load balancera na adresy maszyn z
-    > portami kontenerów.
+-   Podmieniamy adresy dla naszego load balancera na adresy maszyn z portami kontenerów.
 
 -   Restartujemy nginx
 
--   Podmieniamy w plikach index.html informacje IP na temat aktualnej
-    > maszyny
+-   Podmieniamy w plikach index.html informacje IP na temat aktualnej maszyny
 
 -   Kopiujemy plik do kontenerów
 
