@@ -3,39 +3,9 @@ Projekt zaliczeniowy z przedmiotu "Administracja serwerowymi systemami operacyjn
 
 
 ---
-title: "[]{#_9l17l669jnw8 .anchor}Automatyzacja instalacji serwera
-  webowego na wirtualnych maszynach"
+# Automatyzacja instalacji serwera   webowego na wirtualnych maszynach"
 ---
 
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-**Adam Palacz**
 
 ## **Spis treści** 
 
@@ -74,8 +44,6 @@ title: "[]{#_9l17l669jnw8 .anchor}Automatyzacja instalacji serwera
 > [Test całej automatyzacji](#test-całej-automatyzacji) 20
 
 **[Bibliografia](#bibliografia) 23**
-
-## 
 
 ## 
 
@@ -204,8 +172,7 @@ jest na licencji BSD. \[7\]
 
 -   Na każdej maszynie musi zostać zainstalowane SSH
 
--   Na każdej maszynie powinno ustawić się statyczne IP dla sieci
-    > mostkowej
+-   Na każdej maszynie powinno ustawić się statyczne IP dla sieci mostkowej
 
 ## Opis rozwiązań
 
@@ -235,23 +202,19 @@ kolejnych wirtualnych maszyn dołączanie ich do procesu load balancingu.
 
 -   Ustawienie dwie karty sieciowe dla każdej NAT i bridge
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image1.png){width="6.267716535433071in"
-height="4.5in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image1.png)
 
 -   Standardowa instalacja maszyn, aktualizacja systemu i instalacja ssh
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image8.png){width="5.083333333333333in"
-height="2.53125in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image8.png)
 
 -   Ustawienie statycznego IP dla sieci bridge
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image5.png){width="6.267716535433071in"
-height="2.9305555555555554in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image5.png)
 
 -   Instalacja Pythona na wirtualnych maszynach
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image38.png){width="6.267716535433071in"
-height="2.2777777777777777in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image38.png)
 
 -   Instalacja Ansible na maszynie master
 
@@ -261,120 +224,93 @@ height="2.2777777777777777in"}
 
 -   Ustawienie dostępu za pomocą SSH
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image3.png){width="6.267716535433071in"
-height="2.0416666666666665in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image3.png)
 
 #### **Konfiguracja Ansible**
 
 -   Przesłanie klucza ssh z Hosta na maszyny wirtualne
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image7.png){width="5.9375in"
-height="6.3125in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image7.png)
 
 -   Połączenie do maszyny master przy użyciu Remote SSH w Visual Studio
     > Code
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image15.png){width="6.267716535433071in"
-height="1.3888888888888888in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image15.png)
 
 -   Pobranie repozytorium z GitLab
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image12.png){width="4.385416666666667in"
-height="2.1354166666666665in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image12.png)
 
 -   Konfiguracja maszyn w pliku Ansible
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image33.png){width="6.267716535433071in"
-height="3.013888888888889in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image33.png)
 
 -   Sprawdzenie połączenia z maszynami
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image17.png){width="6.267716535433071in"
-height="3.138888888888889in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image17.png)
 
 #### **Budowa automatyzacji dla maszyn z użyciem Ansible**
 
 -   Aktualizacja systemu
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image22.png){width="2.5104166666666665in"
-height="1.8229166666666667in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image22.png)
 
 -   Instalacja nginx i lynx
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image28.png){width="4.5in"
-height="2.21875in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image28.png)
 
 -   Wyślij na slave'y pliki konfiguracyjne nginx i utwórz linki z
     > sites-available do sites-enable
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image32.png){width="3.5520833333333335in"
-height="2.4479166666666665in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image32.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image19.png){width="6.267716535433071in"
-height="1.625in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image19.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image13.png){width="4.34375in"
-height="1.4375in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image13.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image6.png){width="5.71875in"
-height="3.6354166666666665in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image6.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image25.png){width="6.020833333333333in"
-height="3.0416666666666665in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image25.png)
 
 *(plik test.com jest taki sam jak example.com, natomiast test-upstream
 będzie wykorzystany do load balancigu z użyciem dockera)*
 
 -   Dodajemy adresy dns do pliku host na maszynach
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image42.png){width="4.739583333333333in"
-height="1.9166666666666667in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image42.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image11.png){width="4.53125in"
-height="2.59375in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image11.png)
 
 -   Tworzymy foldery dla adresów i przesyłamy do nich pliki html
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image4.png){width="5.177083333333333in"
-height="4.333333333333333in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image4.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image39.png){width="6.267716535433071in"
-height="4.819444444444445in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image39.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image18.png){width="4.479166666666667in"
-height="0.6875in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image18.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image14.png){width="5.802083333333333in"
-height="1.125in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image14.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image30.png){width="5.052083333333333in"
-height="4.8125in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image30.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image41.png){width="4.0in"
-height="0.8854166666666666in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image41.png)
 
 -   Zmieniamy wartości w plikach html w zależności od tego na którym
     > slave plik się znajduje
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image31.png){width="6.267716535433071in"
-height="4.125in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image31.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image40.png){width="5.927083333333333in"
-height="4.395833333333333in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image40.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image10.png){width="5.895833333333333in"
-height="4.364583333333333in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image10.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image20.png){width="4.895833333333333in"
-height="0.6041666666666666in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image20.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image21.png){width="4.96875in"
-height="0.7604166666666666in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image21.png)
 
 -   Instalacja curl i docker
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image35.png){width="5.614583333333333in"
-height="2.9583333333333335in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image35.png)
 
 -   Uruchamiany kontenery docker z usługą apache httpd.
 
@@ -390,29 +326,21 @@ height="2.9583333333333335in"}
 
 -   Kopiujemy plik do kontenerów
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image34.png){width="5.786458880139983in"
-height="4.306201881014873in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image34.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image9.png){width="4.333333333333333in"
-height="0.9791666666666666in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image9.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image37.png){width="5.260416666666667in"
-height="2.5520833333333335in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image37.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image2.png){width="6.267716535433071in"
-height="0.4583333333333333in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image2.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image29.png){width="6.267716535433071in"
-height="0.7638888888888888in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image29.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image36.png){width="4.5625in"
-height="1.78125in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image36.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image16.png){width="4.270833333333333in"
-height="1.2291666666666667in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image16.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image23.png){width="6.267716535433071in"
-height="2.2916666666666665in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image23.png)
 
 *( Na hoście mamy tylko dostęp do aplikacji bez wykorzystanych DNS. Żeby
 mieć do nich dostęp należałoby zmiany dokonać na plikach defaultowych
@@ -420,30 +348,15 @@ nginx)*
 
 #### **Test całej automatyzacji** 
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image24.png){width="5.927083333333333in"
-height="8.354166666666666in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image24.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image26.png){width="6.267716535433071in"
-height="6.347222222222222in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image26.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image27.png){width="6.267716535433071in"
-height="4.152777777777778in"}
+![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image27.png)
 
 Automatyzacja działa, jedynie występuje błąd przy tworzeniu linków z
 site-available do site-enable ponieważ linki już istniały. Z tego powodu
 uwzględniono ignorowanie tego błędu.
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
-
-## 
 
 ## Bibliografia
 
