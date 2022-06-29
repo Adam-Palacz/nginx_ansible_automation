@@ -3,7 +3,7 @@ Projekt zaliczeniowy z przedmiotu "Administracja serwerowymi systemami operacyjn
 
 
 ---
-# Automatyzacja instalacji serwera   webowego na wirtualnych maszynach"
+# Automatyzacja instalacji serwera webowego na wirtualnych maszynach
 
 ## **Spis treści** 
 
@@ -338,7 +338,6 @@ będzie wykorzystany do load balancigu z użyciem dockera)*
 
 ![](files/media/image16.png)
 
-![](files/media/image23.png)
 
 *( Na hoście mamy tylko dostęp do aplikacji bez wykorzystanych DNS. Żeby
 mieć do nich dostęp należałoby zmiany dokonać na plikach defaultowych
