@@ -4,8 +4,6 @@ Projekt zaliczeniowy z przedmiotu "Administracja serwerowymi systemami operacyjn
 
 ---
 # Automatyzacja instalacji serwera   webowego na wirtualnych maszynach"
----
-
 
 ## **Spis treści** 
 
@@ -202,19 +200,19 @@ kolejnych wirtualnych maszyn dołączanie ich do procesu load balancingu.
 
 -   Ustawienie dwie karty sieciowe dla każdej NAT i bridge
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image1.png)
+![](files/media/image1.png)
 
 -   Standardowa instalacja maszyn, aktualizacja systemu i instalacja ssh
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image8.png)
+![](files/media/image8.png)
 
 -   Ustawienie statycznego IP dla sieci bridge
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image5.png)
+![](files/media/image5.png)
 
 -   Instalacja Pythona na wirtualnych maszynach
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image38.png)
+![](files/media/image38.png)
 
 -   Instalacja Ansible na maszynie master
 
@@ -224,93 +222,93 @@ kolejnych wirtualnych maszyn dołączanie ich do procesu load balancingu.
 
 -   Ustawienie dostępu za pomocą SSH
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image3.png)
+![](files/media/image3.png)
 
 #### **Konfiguracja Ansible**
 
 -   Przesłanie klucza ssh z Hosta na maszyny wirtualne
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image7.png)
+![](files/media/image7.png)
 
 -   Połączenie do maszyny master przy użyciu Remote SSH w Visual Studio
     > Code
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image15.png)
+![](files/media/image15.png)
 
 -   Pobranie repozytorium z GitLab
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image12.png)
+![](files/media/image12.png)
 
 -   Konfiguracja maszyn w pliku Ansible
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image33.png)
+![](files/media/image33.png)
 
 -   Sprawdzenie połączenia z maszynami
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image17.png)
+![](files/media/image17.png)
 
 #### **Budowa automatyzacji dla maszyn z użyciem Ansible**
 
 -   Aktualizacja systemu
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image22.png)
+![](files/media/image22.png)
 
 -   Instalacja nginx i lynx
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image28.png)
+![](files/media/image28.png)
 
 -   Wyślij na slave'y pliki konfiguracyjne nginx i utwórz linki z
     > sites-available do sites-enable
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image32.png)
+![](files/media/image32.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image19.png)
+![](files/media/image19.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image13.png)
+![](files/media/image13.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image6.png)
+![](files/media/image6.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image25.png)
+![](files/media/image25.png)
 
 *(plik test.com jest taki sam jak example.com, natomiast test-upstream
 będzie wykorzystany do load balancigu z użyciem dockera)*
 
 -   Dodajemy adresy dns do pliku host na maszynach
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image42.png)
+![](files/media/image42.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image11.png)
+![](files/media/image11.png)
 
 -   Tworzymy foldery dla adresów i przesyłamy do nich pliki html
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image4.png)
+![](files/media/image4.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image39.png)
+![](files/media/image39.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image18.png)
+![](files/media/image18.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image14.png)
+![](files/media/image14.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image30.png)
+![](files/media/image30.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image41.png)
+![](files/media/image41.png)
 
 -   Zmieniamy wartości w plikach html w zależności od tego na którym
     > slave plik się znajduje
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image31.png)
+![](files/media/image31.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image40.png)
+![](files/media/image40.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image10.png)
+![](files/media/image10.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image20.png)
+![](files/media/image20.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image21.png)
+![](files/media/image21.png)
 
 -   Instalacja curl i docker
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image35.png)
+![](files/media/image35.png)
 
 -   Uruchamiany kontenery docker z usługą apache httpd.
 
@@ -326,21 +324,21 @@ będzie wykorzystany do load balancigu z użyciem dockera)*
 
 -   Kopiujemy plik do kontenerów
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image34.png)
+![](files/media/image34.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image9.png)
+![](files/media/image9.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image37.png)
+![](files/media/image37.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image2.png)
+![](files/media/image2.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image29.png)
+![](files/media/image29.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image36.png)
+![](files/media/image36.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image16.png)
+![](files/media/image16.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image23.png)
+![](files/media/image23.png)
 
 *( Na hoście mamy tylko dostęp do aplikacji bez wykorzystanych DNS. Żeby
 mieć do nich dostęp należałoby zmiany dokonać na plikach defaultowych
@@ -348,11 +346,11 @@ nginx)*
 
 #### **Test całej automatyzacji** 
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image24.png)
+![](files/media/image24.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image26.png)
+![](files/media/image26.png)
 
-![](vertopal_0dd374ec35ef4b1a9fa9ee71c155a395/media/image27.png)
+![](files/media/image27.png)
 
 Automatyzacja działa, jedynie występuje błąd przy tworzeniu linków z
 site-available do site-enable ponieważ linki już istniały. Z tego powodu
@@ -360,17 +358,13 @@ uwzględniono ignorowanie tego błędu.
 
 ## Bibliografia
 
-1.  Wstęp do Ansible. Eurolinux.
-    > https://pl.euro-linux.com/eurotower/wstep-do-ansible/
+1.  Wstęp do Ansible. Eurolinux. https://pl.euro-linux.com/eurotower/wstep-do-ansible/
 
-2.  Docker. Wikipedia.
-    > https://pl.wikipedia.org/wiki/Docker\_(oprogramowanie)
+2.  Docker. Wikipedia. https://pl.wikipedia.org/wiki/Docker\_(oprogramowanie)
 
-3.  Ubuntu Server Edition. Wikipedia
-    > https://pl.wikipedia.org/wiki/Ubuntu_Server_Edition
+3.  Ubuntu Server Edition. Wikipedia https://pl.wikipedia.org/wiki/Ubuntu_Server_Edition
 
-4.  Wirtualizacja systemu operacyjnego. Pure PC.
-    > https://www.purepc.pl/wirtualizacja-systemu-operacyjnego-poradnik-dla-poczatkujacych
+4.  Wirtualizacja systemu operacyjnego. Pure PC. https://www.purepc.pl/wirtualizacja-systemu-operacyjnego-poradnik-dla-poczatkujacych
 
 5.  Python. Wikipedia. https://pl.wikipedia.org/wiki/Python
 
