@@ -9,39 +9,39 @@ Projekt zaliczeniowy z przedmiotu "Administracja serwerowymi systemami operacyjn
 
 **[Wstęp teoretyczny](#wstęp-teoretyczny) 3**
 
-> [Ansible](#ansible) 3
+> [Ansible](#ansible)
 >
-> [Docker](#docker) 3
+> [Docker](#docker)
 >
-> [Ubuntu Server](#ubuntu-server) 3
+> [Ubuntu Server](#ubuntu-server)
 >
-> [Wirtualizacja](#wirtualizacja) 4
+> [Wirtualizacja](#wirtualizacja)
 >
-> [Python](#python) 4
+> [Python](#python)
 >
-> [GitLab](#gitlab) 4
+> [GitLab](#gitlab)
 >
-> [Nginx](#nginx) 5
+> [Nginx](#nginx)
 
-**[Wymagania wybranego systemu:](#wymagania-wybranego-systemu) 5**
+**[Wymagania wybranego systemu:](#wymagania-wybranego-systemu)**
 
-**[Opis rozwiązań](#opis-rozwiązań) 5**
+**[Opis rozwiązań](#opis-rozwiązań)**
 
-**[Przebieg tworzenia projektu](#przebieg-tworzenia-projektu) 6**
+**[Przebieg tworzenia projektu](#przebieg-tworzenia-projektu)**
 
 > [Utworzenie wirtualnych maszyn Ubuntu
-> Server](#utworzenie-wirtualnych-maszyn-ubuntu-server) 6
+> Server](#utworzenie-wirtualnych-maszyn-ubuntu-server)
 >
-> [Konfiguracja z GitLab](#konfiguracja-z-gitlab) 8
+> [Konfiguracja z GitLab](#konfiguracja-z-gitlab)
 >
-> [Konfiguracja Ansible](#konfiguracja-ansible) 8
+> [Konfiguracja Ansible](#konfiguracja-ansible)
 >
 > [Budowa automatyzacji dla maszyn z użyciem
-> Ansible](#budowa-automatyzacji-dla-maszyn-z-użyciem-ansible) 10
+> Ansible](#budowa-automatyzacji-dla-maszyn-z-użyciem-ansible)
 >
-> [Test całej automatyzacji](#test-całej-automatyzacji) 20
+> [Test całej automatyzacji](#test-całej-automatyzacji)
 
-**[Bibliografia](#bibliografia) 23**
+**[Bibliografia](#bibliografia)**
 
 ## 
 
