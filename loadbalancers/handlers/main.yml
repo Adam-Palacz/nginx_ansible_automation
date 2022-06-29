@@ -1,0 +1,18 @@
+---
+# handlers file for loadbalancers
+- name: Restart nginx
+  service:
+    name: nginx
+    state: restarted
+    enabled: yes
+
+- name: Create links
+  command: ln -s {{ sites_available_path }}/{{ item }} {{ sites_enabled_path }}
+  loop:
+    - example.com
+    - test.com 
+    - test-upstream.com
+  ignore_errors: yes
+
+- name: Restart netplan
+  command: netplan apply

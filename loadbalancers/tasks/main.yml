@@ -1,0 +1,137 @@
+---
+# tasks file for loadbalancers
+
+- name: sudo apt update
+  apt:
+    update_cache: yes
+
+- name: sudo apt upgrade -y
+  apt:
+    name: '*'
+    state: latest
+
+- name: Install nginx
+  apt:
+    name: nginx
+    state: present
+  notify: Restart nginx
+
+- name: Install lynx
+  apt:
+    name: lynx
+    state: present
+
+- name: Send sites
+  copy:
+    src: "../files/com/{{ item }}"
+    dest: "{{ sites_available_path }}"
+    mode: 0755
+  loop:
+    - example.com
+    - test.com 
+    - test-upstream.com
+  notify: Create links
+
+- name: Configurate etc/hosts
+  lineinfile:
+    path: /etc/hosts
+    line: '{{ ansible_host }} {{ item }} www.{{ item }}'
+  loop:
+    - example.com
+    - test.com
+    - test-upstream.com
+  notify: Restart netplan
+
+- name: Create dir for nginx files
+  command: mkdir -p "{{ item }}"
+  loop: 
+    - "{{ example_path }}"
+    - "{{ test_path }}"
+
+- name: Copy html file
+  copy:
+    src: "{{ html_path }}{{ item.file }}"
+    dest: "{{ item.dest }}"
+    mode: 0644
+  loop: 
+    - { dest: "{{ example_path }}", file: index.html}
+    - { dest: "{{ example_path }}", file: 404.html}
+    - { dest: "{{ example_path }}", file: 401.html}
+    - { dest: "{{ example_path }}", file: admin.html}
+    - { dest: "{{ test_path }}", file: index.html}
+    - { dest: "{{ test_path }}", file: 404.html}
+    - { dest: "{{ test_path }}", file: 401.html}
+    - { dest: "{{ test_path }}", file: admin.html}
+
+- name: Change title
+  replace:
+    path: "{{ item.src }}/index.html"
+    regexp: 'NAME'
+    replace: "{{ item.name }}"
+  loop: 
+    - { src: "{{ example_path }}", name: "example.com {{ ansible_host }}"}
+    - { src: "{{ test_path }}", name: "test.com {{ ansible_host }}"}
+
+
+- name: Change ip-address
+  replace:
+    path: "{{ item.src }}/{{ item.file }}"
+    regexp: 'IP-ADDRESS'
+    replace: "{{ item.name }}"
+  loop: 
+    - { src: "{{ example_path }}", name: example.com, file: 404.html}
+    - { src: "{{ test_path }}", name: test.com, file: 404.html}
+    - { src: "{{ example_path }}", name: example.com, file: 401.html}
+    - { src: "{{ test_path }}", name: test.com, file: 401.html}
+
+- name: install curl
+  command: apt-get install curl
+
+- name: install docker
+  command: "{{ item }}"
+  loop:
+    - curl -fsSL https://get.docker.com -o get-docker.sh
+    - sh get-docker.sh
+
+- name: adding existing user adam1 to group docker
+  user:
+    name: adam1
+    groups: docker
+    append: yes
+
+- name: Docker clear
+  command: sh -c "docker {{ item }} $(docker ps -qa)"
+  loop:
+    - stop
+    - rm
+
+- name: Run docker httpd
+  command: sh -c "docker run -it -d --name simple_www -p 8080:80 httpd"
+
+- name: Create folder
+  command: mkdir -p {{ docker_file_path }}
+
+- name: Copy file
+  copy:
+    src: ../files/docker_files/index.html
+    dest: "{{ docker_file_path }}"
+    mode: 0755
+
+- name: Change ip balancers
+  replace:
+    path: "{{ sites_available_path }}/test-upstream.com"
+    regexp: '{{ item.name }}'
+    replace: "{{ item.ip }}"
+  loop: 
+    - { name: localhost1, ip: 192.168.0.109:8080}
+    - { name: localhost2, ip: 192.168.0.110:8080}
+  notify: Restart nginx
+  
+- name: Set ip-host
+  replace:
+    path: "{{ docker_file_path }}index.html"
+    regexp: 'IP-HOST'
+    replace: "{{ ansible_host }}"
+
+- name: Docker cp
+  command: sh -c "docker cp {{ docker_file_path }}index.html simple_www:/usr/local/apache2/htdocs/"

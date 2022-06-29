@@ -1,0 +1,8 @@
+---
+# vars file for loadbalancers
+example_path: "/var/www/example.com/html/" 
+test_path: "/var/www/test.com/html/" 
+html_path: "../files/html/"
+sites_available_path: "/etc/nginx/sites-available/"
+sites_enabled_path: "/etc/nginx/sites-enabled/"
+docker_file_path: /docker_files/

@@ -1,0 +1,8 @@
+--- # loadbalancer-roles.yaml
+
+- name : Install and set loadbalancer role
+  hosts: loadbalancers
+  become: true
+  roles:
+    - loadbalancers
+  

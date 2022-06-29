@@ -1,0 +1,16 @@
+dev:
+  children:
+    loadbalancers:
+      hosts:
+        ubuntu-03.palacz.in:
+          ansible_host: 192.168.0.109
+        ubuntu-04.palacz.in:
+          ansible_host: 192.168.0.110
+
+local:
+  children:
+    my_pc:
+      hosts:
+        master_ansible:
+          ansible_host: localhost
+          ansible_connection: local
